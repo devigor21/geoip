@@ -1,19 +1,12 @@
 {
   "input": [
     {
-      "type": "dbipCountryMMDB",
-      "action": "add",
+      "type": "text",
+      "action": "add", // add IP or CIDR
       "args": {
-        "uri": "./db-ip/dbip-country-lite.mmdb"
+        "inputDir": "./custom" // walk through all files in directory ./text (excluded children directories by default)
+        // "wantedList": ["roblox", "telegram", "vercel", "vot"] // wanted lists called cn, us, jp without file extension
       }
-    },
-    {
-      "type": "private",
-      "action": "add"
-    },
-    {
-      "type": "test",
-      "action": "add"
     }
   ],
   "output": [
@@ -24,35 +17,10 @@
         "outputDir": "./output",
         "outputName": "geoip.dat"
       }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "outputName": "geoip-only-cn-private.dat",
-        "wantedList": ["cn", "private"]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "oneFilePerList": true,
-        "wantedList": ["cn", "private", "test"]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "oneFilePerList": true
-      }
-    },
-    {
-      "type": "text",
-      "action": "output"
     }
+    // {
+    //   "type": "text",
+    //   "action": "output"
+    // }
   ]
 }
