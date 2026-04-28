@@ -2,3 +2,5 @@ go run ./ -c config.json
 
 
 https://jomertix.github.io/geofileviewer/ - не показывает geoip файл, если там присутствуют не только cidr, а просто IP-адреса. Как, например список vot.lst
+
+TODO - Сделать список RU IP и основных сервисов.
